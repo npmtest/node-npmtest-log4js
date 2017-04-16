@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-log4js/log4js/lib/log4js.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-log4js/node_modules/log4js/lib/log4js.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-log4js">npmtest-log4js (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-log4js/log4js/lib/log4js.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-log4js/node_modules/log4js/lib/log4js.js</span></h1>
     <h2>
         
         Statements: <span class="metric">39.73% <small>(87 / 219)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-log4js/log4js/lib/</a> &#187; log4js.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> » <a href="index.html">node-npmtest-log4js/node_modules/log4js/lib/</a> » log4js.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -1310,65 +1308,65 @@ var events = require('events')
   replaceConsole: false
 };
 &nbsp;
-<span class="fstat-no" title="function not covered" >function hasLogger(logger) {</span>
-<span class="cstat-no" title="statement not covered" >  return loggers.hasOwnProperty(logger);</span>
+<span class="fstat-no" title="function not covered">function hasLogger(logger) {</span>
+<span class="cstat-no" title="statement not covered">  return loggers.hasOwnProperty(logger);</span>
 }
 &nbsp;
-levels.forName = <span class="fstat-no" title="function not covered" >function(levelStr, levelVal) {</span>
-<span class="cstat-no" title="statement not covered" >  var level;</span>
-<span class="cstat-no" title="statement not covered" >  if (typeof levelStr === "string" &amp;&amp; typeof levelVal === "number") {</span>
-<span class="cstat-no" title="statement not covered" >    var levelUpper = levelStr.toUpperCase();</span>
-<span class="cstat-no" title="statement not covered" >    level = new levels.Level(levelVal, levelUpper);</span>
-<span class="cstat-no" title="statement not covered" >    loggerModule.addLevelMethods(level);</span>
+levels.forName = <span class="fstat-no" title="function not covered">function(levelStr, levelVal) {</span>
+<span class="cstat-no" title="statement not covered">  var level;</span>
+<span class="cstat-no" title="statement not covered">  if (typeof levelStr === "string" &amp;&amp; typeof levelVal === "number") {</span>
+<span class="cstat-no" title="statement not covered">    var levelUpper = levelStr.toUpperCase();</span>
+<span class="cstat-no" title="statement not covered">    level = new levels.Level(levelVal, levelUpper);</span>
+<span class="cstat-no" title="statement not covered">    loggerModule.addLevelMethods(level);</span>
   }
-<span class="cstat-no" title="statement not covered" >  return level;</span>
+<span class="cstat-no" title="statement not covered">  return level;</span>
 };
 &nbsp;
-levels.getLevel = <span class="fstat-no" title="function not covered" >function(levelStr) {</span>
-<span class="cstat-no" title="statement not covered" >  var level;</span>
-<span class="cstat-no" title="statement not covered" >  if (typeof levelStr === "string") {</span>
-<span class="cstat-no" title="statement not covered" >    var levelUpper = levelStr.toUpperCase();</span>
-<span class="cstat-no" title="statement not covered" >    level = levels.toLevel(levelStr);</span>
+levels.getLevel = <span class="fstat-no" title="function not covered">function(levelStr) {</span>
+<span class="cstat-no" title="statement not covered">  var level;</span>
+<span class="cstat-no" title="statement not covered">  if (typeof levelStr === "string") {</span>
+<span class="cstat-no" title="statement not covered">    var levelUpper = levelStr.toUpperCase();</span>
+<span class="cstat-no" title="statement not covered">    level = levels.toLevel(levelStr);</span>
   }
-<span class="cstat-no" title="statement not covered" >  return level;</span>
+<span class="cstat-no" title="statement not covered">  return level;</span>
 };
 &nbsp;
-<span class="fstat-no" title="function not covered" >function getBufferedLogger(categoryName) {</span>
-<span class="cstat-no" title="statement not covered" >    var base_logger = getLogger(categoryName);</span>
-<span class="cstat-no" title="statement not covered" >    var logger = {};</span>
-<span class="cstat-no" title="statement not covered" >    logger.temp = [];</span>
-<span class="cstat-no" title="statement not covered" >    logger.target = base_logger;</span>
-<span class="cstat-no" title="statement not covered" >    logger.flush = <span class="fstat-no" title="function not covered" >function () {</span></span>
-<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; logger.temp.length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >            var log = logger.temp[i];</span>
-<span class="cstat-no" title="statement not covered" >            logger.target[log.level](log.message);</span>
-<span class="cstat-no" title="statement not covered" >            delete logger.temp[i];</span>
+<span class="fstat-no" title="function not covered">function getBufferedLogger(categoryName) {</span>
+<span class="cstat-no" title="statement not covered">    var base_logger = getLogger(categoryName);</span>
+<span class="cstat-no" title="statement not covered">    var logger = {};</span>
+<span class="cstat-no" title="statement not covered">    logger.temp = [];</span>
+<span class="cstat-no" title="statement not covered">    logger.target = base_logger;</span>
+<span class="cstat-no" title="statement not covered">    logger.flush = <span class="fstat-no" title="function not covered">function () {</span></span>
+<span class="cstat-no" title="statement not covered">        for (var i = 0; i &lt; logger.temp.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">            var log = logger.temp[i];</span>
+<span class="cstat-no" title="statement not covered">            logger.target[log.level](log.message);</span>
+<span class="cstat-no" title="statement not covered">            delete logger.temp[i];</span>
         }
     };
-<span class="cstat-no" title="statement not covered" >    logger.trace = <span class="fstat-no" title="function not covered" >function (message) {</span> <span class="cstat-no" title="statement not covered" >logger.temp.push({level: 'trace', message: message}); </span>};</span>
-<span class="cstat-no" title="statement not covered" >    logger.debug = <span class="fstat-no" title="function not covered" >function (message) {</span> <span class="cstat-no" title="statement not covered" >logger.temp.push({level: 'debug', message: message}); </span>};</span>
-<span class="cstat-no" title="statement not covered" >    logger.info = <span class="fstat-no" title="function not covered" >function (message) {</span> <span class="cstat-no" title="statement not covered" >logger.temp.push({level: 'info', message: message}); </span>};</span>
-<span class="cstat-no" title="statement not covered" >    logger.warn = <span class="fstat-no" title="function not covered" >function (message) {</span> <span class="cstat-no" title="statement not covered" >logger.temp.push({level: 'warn', message: message}); </span>};</span>
-<span class="cstat-no" title="statement not covered" >    logger.error = <span class="fstat-no" title="function not covered" >function (message) {</span> <span class="cstat-no" title="statement not covered" >logger.temp.push({level: 'error', message: message}); </span>};</span>
-<span class="cstat-no" title="statement not covered" >    logger.fatal = <span class="fstat-no" title="function not covered" >function (message) {</span> <span class="cstat-no" title="statement not covered" >logger.temp.push({level: 'fatal', message: message}); </span>};</span>
+<span class="cstat-no" title="statement not covered">    logger.trace = <span class="fstat-no" title="function not covered">function (message) {</span> <span class="cstat-no" title="statement not covered">logger.temp.push({level: 'trace', message: message}); </span>};</span>
+<span class="cstat-no" title="statement not covered">    logger.debug = <span class="fstat-no" title="function not covered">function (message) {</span> <span class="cstat-no" title="statement not covered">logger.temp.push({level: 'debug', message: message}); </span>};</span>
+<span class="cstat-no" title="statement not covered">    logger.info = <span class="fstat-no" title="function not covered">function (message) {</span> <span class="cstat-no" title="statement not covered">logger.temp.push({level: 'info', message: message}); </span>};</span>
+<span class="cstat-no" title="statement not covered">    logger.warn = <span class="fstat-no" title="function not covered">function (message) {</span> <span class="cstat-no" title="statement not covered">logger.temp.push({level: 'warn', message: message}); </span>};</span>
+<span class="cstat-no" title="statement not covered">    logger.error = <span class="fstat-no" title="function not covered">function (message) {</span> <span class="cstat-no" title="statement not covered">logger.temp.push({level: 'error', message: message}); </span>};</span>
+<span class="cstat-no" title="statement not covered">    logger.fatal = <span class="fstat-no" title="function not covered">function (message) {</span> <span class="cstat-no" title="statement not covered">logger.temp.push({level: 'fatal', message: message}); </span>};</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return logger;</span>
+<span class="cstat-no" title="statement not covered">    return logger;</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function normalizeCategory (category) {</span>
-<span class="cstat-no" title="statement not covered" >  return  category + '.';</span>
+<span class="fstat-no" title="function not covered">function normalizeCategory (category) {</span>
+<span class="cstat-no" title="statement not covered">  return  category + '.';</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function doesLevelEntryContainsLogger (levelCategory, loggerCategory) {</span>
-<span class="cstat-no" title="statement not covered" >  var normalizedLevelCategory = normalizeCategory(levelCategory);</span>
-<span class="cstat-no" title="statement not covered" >  var normalizedLoggerCategory = normalizeCategory(loggerCategory);</span>
-<span class="cstat-no" title="statement not covered" >  return normalizedLoggerCategory.substring(0, normalizedLevelCategory.length) == normalizedLevelCategory; </span>//jshint ignore:line
+<span class="fstat-no" title="function not covered">function doesLevelEntryContainsLogger (levelCategory, loggerCategory) {</span>
+<span class="cstat-no" title="statement not covered">  var normalizedLevelCategory = normalizeCategory(levelCategory);</span>
+<span class="cstat-no" title="statement not covered">  var normalizedLoggerCategory = normalizeCategory(loggerCategory);</span>
+<span class="cstat-no" title="statement not covered">  return normalizedLoggerCategory.substring(0, normalizedLevelCategory.length) == normalizedLevelCategory; </span>//jshint ignore:line
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function doesAppenderContainsLogger (appenderCategory, loggerCategory) {</span>
-<span class="cstat-no" title="statement not covered" >  var normalizedAppenderCategory = normalizeCategory(appenderCategory);</span>
-<span class="cstat-no" title="statement not covered" >  var normalizedLoggerCategory = normalizeCategory(loggerCategory);</span>
-<span class="cstat-no" title="statement not covered" >  return normalizedLoggerCategory.substring(0, normalizedAppenderCategory.length) == normalizedAppenderCategory; </span>//jshint ignore:line
+<span class="fstat-no" title="function not covered">function doesAppenderContainsLogger (appenderCategory, loggerCategory) {</span>
+<span class="cstat-no" title="statement not covered">  var normalizedAppenderCategory = normalizeCategory(appenderCategory);</span>
+<span class="cstat-no" title="statement not covered">  var normalizedLoggerCategory = normalizeCategory(loggerCategory);</span>
+<span class="cstat-no" title="statement not covered">  return normalizedLoggerCategory.substring(0, normalizedAppenderCategory.length) == normalizedAppenderCategory; </span>//jshint ignore:line
 }
 &nbsp;
 &nbsp;
@@ -1378,57 +1376,57 @@ levels.getLevel = <span class="fstat-no" title="function not covered" >function(
  * @return {Logger} instance of logger for the category
  * @static
  */
-<span class="fstat-no" title="function not covered" >function getLogger (loggerCategoryName) {</span>
+<span class="fstat-no" title="function not covered">function getLogger (loggerCategoryName) {</span>
 &nbsp;
   // Use default logger if categoryName is not specified or invalid
-<span class="cstat-no" title="statement not covered" >  if (typeof loggerCategoryName !== "string") {</span>
-<span class="cstat-no" title="statement not covered" >    loggerCategoryName = Logger.DEFAULT_CATEGORY;</span>
+<span class="cstat-no" title="statement not covered">  if (typeof loggerCategoryName !== "string") {</span>
+<span class="cstat-no" title="statement not covered">    loggerCategoryName = Logger.DEFAULT_CATEGORY;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!hasLogger(loggerCategoryName)) {</span>
+<span class="cstat-no" title="statement not covered">  if (!hasLogger(loggerCategoryName)) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var level;</span>
+<span class="cstat-no" title="statement not covered">    var level;</span>
 &nbsp;
     /* jshint -W073 */
     // If there's a "levels" entry in the configuration
-<span class="cstat-no" title="statement not covered" >    if (levels.config) {</span>
+<span class="cstat-no" title="statement not covered">    if (levels.config) {</span>
       // Goes through the categories in the levels configuration entry,
       // starting with the "higher" ones.
-<span class="cstat-no" title="statement not covered" >      var keys = Object.keys(levels.config).sort();</span>
-<span class="cstat-no" title="statement not covered" >      for (var idx = 0; idx &lt; keys.length; idx++) {</span>
-<span class="cstat-no" title="statement not covered" >        var levelCategory = keys[idx];</span>
-<span class="cstat-no" title="statement not covered" >        if (doesLevelEntryContainsLogger(levelCategory, loggerCategoryName)) {</span>
+<span class="cstat-no" title="statement not covered">      var keys = Object.keys(levels.config).sort();</span>
+<span class="cstat-no" title="statement not covered">      for (var idx = 0; idx &lt; keys.length; idx++) {</span>
+<span class="cstat-no" title="statement not covered">        var levelCategory = keys[idx];</span>
+<span class="cstat-no" title="statement not covered">        if (doesLevelEntryContainsLogger(levelCategory, loggerCategoryName)) {</span>
           // level for the logger
-<span class="cstat-no" title="statement not covered" >          level = levels.config[levelCategory];</span>
+<span class="cstat-no" title="statement not covered">          level = levels.config[levelCategory];</span>
         }
       }
     }
     /* jshint +W073 */
 &nbsp;
     // Create the logger for this name if it doesn't already exist
-<span class="cstat-no" title="statement not covered" >    loggers[loggerCategoryName] = new Logger(loggerCategoryName, level);</span>
+<span class="cstat-no" title="statement not covered">    loggers[loggerCategoryName] = new Logger(loggerCategoryName, level);</span>
 &nbsp;
     /* jshint -W083 */
-<span class="cstat-no" title="statement not covered" >    var appenderList;</span>
-<span class="cstat-no" title="statement not covered" >    for(var appenderCategory in appenders) {</span>
-<span class="cstat-no" title="statement not covered" >      if (doesAppenderContainsLogger(appenderCategory, loggerCategoryName)) {</span>
-<span class="cstat-no" title="statement not covered" >        appenderList = appenders[appenderCategory];</span>
-<span class="cstat-no" title="statement not covered" >        appenderList.forEach(<span class="fstat-no" title="function not covered" >function(appender) {</span></span>
-<span class="cstat-no" title="statement not covered" >          loggers[loggerCategoryName].addListener("log", appender);</span>
+<span class="cstat-no" title="statement not covered">    var appenderList;</span>
+<span class="cstat-no" title="statement not covered">    for(var appenderCategory in appenders) {</span>
+<span class="cstat-no" title="statement not covered">      if (doesAppenderContainsLogger(appenderCategory, loggerCategoryName)) {</span>
+<span class="cstat-no" title="statement not covered">        appenderList = appenders[appenderCategory];</span>
+<span class="cstat-no" title="statement not covered">        appenderList.forEach(<span class="fstat-no" title="function not covered">function(appender) {</span></span>
+<span class="cstat-no" title="statement not covered">          loggers[loggerCategoryName].addListener("log", appender);</span>
         });
       }
     }
     /* jshint +W083 */
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (appenders[ALL_CATEGORIES]) {</span>
-<span class="cstat-no" title="statement not covered" >      appenderList = appenders[ALL_CATEGORIES];</span>
-<span class="cstat-no" title="statement not covered" >      appenderList.forEach(<span class="fstat-no" title="function not covered" >function(appender) {</span></span>
-<span class="cstat-no" title="statement not covered" >        loggers[loggerCategoryName].addListener("log", appender);</span>
+<span class="cstat-no" title="statement not covered">    if (appenders[ALL_CATEGORIES]) {</span>
+<span class="cstat-no" title="statement not covered">      appenderList = appenders[ALL_CATEGORIES];</span>
+<span class="cstat-no" title="statement not covered">      appenderList.forEach(<span class="fstat-no" title="function not covered">function(appender) {</span></span>
+<span class="cstat-no" title="statement not covered">        loggers[loggerCategoryName].addListener("log", appender);</span>
       });
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return loggers[loggerCategoryName];</span>
+<span class="cstat-no" title="statement not covered">  return loggers[loggerCategoryName];</span>
 }
 &nbsp;
 /**
@@ -1438,28 +1436,28 @@ function addAppender () {
   var args = Array.prototype.slice.call(arguments);
   var appender = args.shift();
   //check for a shutdown fn
-  <span class="missing-if-branch" title="if path not taken" >I</span>if (args.length &gt; 0 &amp;&amp; typeof args[0] === 'function') {
-<span class="cstat-no" title="statement not covered" >    appenderShutdowns[appender] = args.shift();</span>
+  <span class="missing-if-branch" title="if path not taken">I</span>if (args.length &gt; 0 &amp;&amp; typeof args[0] === 'function') {
+<span class="cstat-no" title="statement not covered">    appenderShutdowns[appender] = args.shift();</span>
   }
 &nbsp;
-  <span class="missing-if-branch" title="else path not taken" >E</span>if (args.length === 0 || args[0] === undefined) {
+  <span class="missing-if-branch" title="else path not taken">E</span>if (args.length === 0 || args[0] === undefined) {
     args = [ ALL_CATEGORIES ];
   }
   //argument may already be an array
-  <span class="missing-if-branch" title="if path not taken" >I</span>if (Array.isArray(args[0])) {
-<span class="cstat-no" title="statement not covered" >    args = args[0];</span>
+  <span class="missing-if-branch" title="if path not taken">I</span>if (Array.isArray(args[0])) {
+<span class="cstat-no" title="statement not covered">    args = args[0];</span>
   }
 &nbsp;
   args.forEach(function(appenderCategory) {
     addAppenderToCategory(appender, appenderCategory);
 &nbsp;
-    <span class="missing-if-branch" title="else path not taken" >E</span>if (appenderCategory === ALL_CATEGORIES) {
+    <span class="missing-if-branch" title="else path not taken">E</span>if (appenderCategory === ALL_CATEGORIES) {
       addAppenderToAllLoggers(appender);
     } else {
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      for(var loggerCategory in loggers) {</span>
-<span class="cstat-no" title="statement not covered" >        if (doesAppenderContainsLogger(appenderCategory,loggerCategory)) {</span>
-<span class="cstat-no" title="statement not covered" >          loggers[loggerCategory].addListener("log", appender);</span>
+<span class="cstat-no" title="statement not covered">      for(var loggerCategory in loggers) {</span>
+<span class="cstat-no" title="statement not covered">        if (doesAppenderContainsLogger(appenderCategory,loggerCategory)) {</span>
+<span class="cstat-no" title="statement not covered">          loggers[loggerCategory].addListener("log", appender);</span>
         }
       }
 &nbsp;
@@ -1469,14 +1467,14 @@ function addAppender () {
 &nbsp;
 function addAppenderToAllLoggers(appender) {
   for (var logger in loggers) {
-<span class="cstat-no" title="statement not covered" >    if (hasLogger(logger)) {</span>
-<span class="cstat-no" title="statement not covered" >      loggers[logger].addListener("log", appender);</span>
+<span class="cstat-no" title="statement not covered">    if (hasLogger(logger)) {</span>
+<span class="cstat-no" title="statement not covered">      loggers[logger].addListener("log", appender);</span>
     }
   }
 }
 &nbsp;
 function addAppenderToCategory(appender, category) {
-  <span class="missing-if-branch" title="else path not taken" >E</span>if (!appenders[category]) {
+  <span class="missing-if-branch" title="else path not taken">E</span>if (!appenders[category]) {
     appenders[category] = [];
   }
   appenders[category].push(appender);
@@ -1488,15 +1486,15 @@ function clearAppenders () {
   loggerModule.enableAllLogWrites();
   appenders = {};
   for (var logger in loggers) {
-<span class="cstat-no" title="statement not covered" >    if (hasLogger(logger)) {</span>
-<span class="cstat-no" title="statement not covered" >      loggers[logger].removeAllListeners("log");</span>
+<span class="cstat-no" title="statement not covered">    if (hasLogger(logger)) {</span>
+<span class="cstat-no" title="statement not covered">      loggers[logger].removeAllListeners("log");</span>
     }
   }
 }
 &nbsp;
 function configureAppenders(appenderList, options) {
   clearAppenders();
-  <span class="missing-if-branch" title="else path not taken" >E</span>if (appenderList) {
+  <span class="missing-if-branch" title="else path not taken">E</span>if (appenderList) {
     appenderList.forEach(function(appenderConfig) {
       loadAppender(appenderConfig.type);
       var appender;
@@ -1505,7 +1503,7 @@ function configureAppenders(appenderList, options) {
         appender = appenderMakers[appenderConfig.type](appenderConfig, options);
         addAppender(appender, appenderConfig.category);
       } catch(e) {
-<span class="cstat-no" title="statement not covered" >        throw new Error("log4js configuration problem for " + util.inspect(appenderConfig), e);</span>
+<span class="cstat-no" title="statement not covered">        throw new Error("log4js configuration problem for " + util.inspect(appenderConfig), e);</span>
       }
     });
   }
@@ -1513,17 +1511,17 @@ function configureAppenders(appenderList, options) {
 &nbsp;
 function configureLevels(_levels) {
   levels.config = _levels; // Keep it so we can create loggers later using this cfg
-  <span class="missing-if-branch" title="if path not taken" >I</span>if (_levels) {
-<span class="cstat-no" title="statement not covered" >    var keys = Object.keys(levels.config).sort();</span>
-<span class="cstat-no" title="statement not covered" >    for (var idx in keys) {</span>
-<span class="cstat-no" title="statement not covered" >      var category = keys[idx];</span>
-<span class="cstat-no" title="statement not covered" >      if(category === ALL_CATEGORIES) {</span>
-<span class="cstat-no" title="statement not covered" >        setGlobalLogLevel(_levels[category]);</span>
+  <span class="missing-if-branch" title="if path not taken">I</span>if (_levels) {
+<span class="cstat-no" title="statement not covered">    var keys = Object.keys(levels.config).sort();</span>
+<span class="cstat-no" title="statement not covered">    for (var idx in keys) {</span>
+<span class="cstat-no" title="statement not covered">      var category = keys[idx];</span>
+<span class="cstat-no" title="statement not covered">      if(category === ALL_CATEGORIES) {</span>
+<span class="cstat-no" title="statement not covered">        setGlobalLogLevel(_levels[category]);</span>
       }
       /* jshint -W073 */
-<span class="cstat-no" title="statement not covered" >      for(var loggerCategory in loggers) {</span>
-<span class="cstat-no" title="statement not covered" >        if (doesLevelEntryContainsLogger(category, loggerCategory)) {</span>
-<span class="cstat-no" title="statement not covered" >          loggers[loggerCategory].setLevel(_levels[category]);</span>
+<span class="cstat-no" title="statement not covered">      for(var loggerCategory in loggers) {</span>
+<span class="cstat-no" title="statement not covered">        if (doesLevelEntryContainsLogger(category, loggerCategory)) {</span>
+<span class="cstat-no" title="statement not covered">          loggers[loggerCategory].setLevel(_levels[category]);</span>
         }
       }
       /* jshint +W073 */
@@ -1531,8 +1529,8 @@ function configureLevels(_levels) {
   }
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function setGlobalLogLevel(level) {</span>
-<span class="cstat-no" title="statement not covered" >  Logger.prototype.level = levels.toLevel(level, levels.TRACE);</span>
+<span class="fstat-no" title="function not covered">function setGlobalLogLevel(level) {</span>
+<span class="cstat-no" title="statement not covered">  Logger.prototype.level = levels.toLevel(level, levels.TRACE);</span>
 }
 &nbsp;
 /**
@@ -1540,31 +1538,31 @@ function configureLevels(_levels) {
  * @return {Logger} instance of default logger
  * @static
  */
-<span class="fstat-no" title="function not covered" >function getDefaultLogger () {</span>
-<span class="cstat-no" title="statement not covered" >  return getLogger(Logger.DEFAULT_CATEGORY);</span>
+<span class="fstat-no" title="function not covered">function getDefaultLogger () {</span>
+<span class="cstat-no" title="statement not covered">  return getLogger(Logger.DEFAULT_CATEGORY);</span>
 }
 &nbsp;
 var configState = {};
 &nbsp;
 function loadConfigurationFile(filename) {
-  <span class="missing-if-branch" title="if path not taken" >I</span>if (filename) {
-<span class="cstat-no" title="statement not covered" >    return JSON.parse(fs.readFileSync(filename, "utf8"));</span>
+  <span class="missing-if-branch" title="if path not taken">I</span>if (filename) {
+<span class="cstat-no" title="statement not covered">    return JSON.parse(fs.readFileSync(filename, "utf8"));</span>
   }
   return undefined;
 }
 &nbsp;
 function configureOnceOff(config, options) {
-  <span class="missing-if-branch" title="else path not taken" >E</span>if (config) {
+  <span class="missing-if-branch" title="else path not taken">E</span>if (config) {
     try {
       restoreConsole();
       configureLevels(config.levels);
       configureAppenders(config.appenders, options);
 &nbsp;
-      <span class="missing-if-branch" title="if path not taken" >I</span>if (config.replaceConsole) {
-<span class="cstat-no" title="statement not covered" >        replaceConsole();</span>
+      <span class="missing-if-branch" title="if path not taken">I</span>if (config.replaceConsole) {
+<span class="cstat-no" title="statement not covered">        replaceConsole();</span>
       }
     } catch (e) {
-<span class="cstat-no" title="statement not covered" >      throw new Error(</span>
+<span class="cstat-no" title="statement not covered">      throw new Error(</span>
         "Problem reading log4js config " + util.inspect(config) +
           ". Error was \"" + e.message + "\" (" + e.stack + ")"
       );
@@ -1572,34 +1570,34 @@ function configureOnceOff(config, options) {
   }
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function reloadConfiguration(options) {</span>
-<span class="cstat-no" title="statement not covered" >  var mtime = getMTime(configState.filename);</span>
-<span class="cstat-no" title="statement not covered" >  if (!mtime) <span class="cstat-no" title="statement not covered" >return;</span></span>
+<span class="fstat-no" title="function not covered">function reloadConfiguration(options) {</span>
+<span class="cstat-no" title="statement not covered">  var mtime = getMTime(configState.filename);</span>
+<span class="cstat-no" title="statement not covered">  if (!mtime) <span class="cstat-no" title="statement not covered">return;</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (configState.lastMTime &amp;&amp; (mtime.getTime() &gt; configState.lastMTime.getTime())) {</span>
-<span class="cstat-no" title="statement not covered" >    configureOnceOff(loadConfigurationFile(configState.filename), options);</span>
+<span class="cstat-no" title="statement not covered">  if (configState.lastMTime &amp;&amp; (mtime.getTime() &gt; configState.lastMTime.getTime())) {</span>
+<span class="cstat-no" title="statement not covered">    configureOnceOff(loadConfigurationFile(configState.filename), options);</span>
   }
-<span class="cstat-no" title="statement not covered" >  configState.lastMTime = mtime;</span>
+<span class="cstat-no" title="statement not covered">  configState.lastMTime = mtime;</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function getMTime(filename) {</span>
-<span class="cstat-no" title="statement not covered" >  var mtime;</span>
-<span class="cstat-no" title="statement not covered" >  try {</span>
-<span class="cstat-no" title="statement not covered" >    mtime = fs.statSync(configState.filename).mtime;</span>
+<span class="fstat-no" title="function not covered">function getMTime(filename) {</span>
+<span class="cstat-no" title="statement not covered">  var mtime;</span>
+<span class="cstat-no" title="statement not covered">  try {</span>
+<span class="cstat-no" title="statement not covered">    mtime = fs.statSync(configState.filename).mtime;</span>
   } catch (e) {
-<span class="cstat-no" title="statement not covered" >    getLogger('log4js').warn('Failed to load configuration file ' + filename);</span>
+<span class="cstat-no" title="statement not covered">    getLogger('log4js').warn('Failed to load configuration file ' + filename);</span>
   }
-<span class="cstat-no" title="statement not covered" >  return mtime;</span>
+<span class="cstat-no" title="statement not covered">  return mtime;</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function initReloadConfiguration(filename, options) {</span>
-<span class="cstat-no" title="statement not covered" >  if (configState.timerId) {</span>
-<span class="cstat-no" title="statement not covered" >    clearInterval(configState.timerId);</span>
-<span class="cstat-no" title="statement not covered" >    delete configState.timerId;</span>
+<span class="fstat-no" title="function not covered">function initReloadConfiguration(filename, options) {</span>
+<span class="cstat-no" title="statement not covered">  if (configState.timerId) {</span>
+<span class="cstat-no" title="statement not covered">    clearInterval(configState.timerId);</span>
+<span class="cstat-no" title="statement not covered">    delete configState.timerId;</span>
   }
-<span class="cstat-no" title="statement not covered" >  configState.filename = filename;</span>
-<span class="cstat-no" title="statement not covered" >  configState.lastMTime = getMTime(filename);</span>
-<span class="cstat-no" title="statement not covered" >  configState.timerId = setInterval(reloadConfiguration, options.reloadSecs*1000, options);</span>
+<span class="cstat-no" title="statement not covered">  configState.filename = filename;</span>
+<span class="cstat-no" title="statement not covered">  configState.lastMTime = getMTime(filename);</span>
+<span class="cstat-no" title="statement not covered">  configState.timerId = setInterval(reloadConfiguration, options.reloadSecs*1000, options);</span>
 }
 &nbsp;
 function configure(configurationFileOrObject, options) {
@@ -1607,14 +1605,14 @@ function configure(configurationFileOrObject, options) {
   config = config || process.env.LOG4JS_CONFIG;
   options = options || {};
 &nbsp;
-  <span class="missing-if-branch" title="else path not taken" >E</span>if (config === undefined || <span class="branch-1 cbranch-no" title="branch not covered" >config === null </span>|| <span class="branch-2 cbranch-no" title="branch not covered" >typeof(config) === 'string')</span> {
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (options.reloadSecs) {
-<span class="cstat-no" title="statement not covered" >      initReloadConfiguration(config, options);</span>
+  <span class="missing-if-branch" title="else path not taken">E</span>if (config === undefined || <span class="branch-1 cbranch-no" title="branch not covered">config === null </span>|| <span class="branch-2 cbranch-no" title="branch not covered">typeof(config) === 'string')</span> {
+    <span class="missing-if-branch" title="if path not taken">I</span>if (options.reloadSecs) {
+<span class="cstat-no" title="statement not covered">      initReloadConfiguration(config, options);</span>
     }
     config = loadConfigurationFile(config) || defaultConfig;
   } else {
-<span class="cstat-no" title="statement not covered" >    if (options.reloadSecs) {</span>
-<span class="cstat-no" title="statement not covered" >      getLogger('log4js').warn(</span>
+<span class="cstat-no" title="statement not covered">    if (options.reloadSecs) {</span>
+<span class="cstat-no" title="statement not covered">      getLogger('log4js').warn(</span>
         'Ignoring configuration reload parameter for "object" configuration.'
       );
     }
@@ -1630,15 +1628,15 @@ var originalConsoleFunctions = {
   error: console.error
 };
 &nbsp;
-<span class="fstat-no" title="function not covered" >function replaceConsole(logger) {</span>
-<span class="fstat-no" title="function not covered" >  function replaceWith(fn) {</span>
-<span class="cstat-no" title="statement not covered" >    return <span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >      fn.apply(logger, arguments);</span>
+<span class="fstat-no" title="function not covered">function replaceConsole(logger) {</span>
+<span class="fstat-no" title="function not covered">  function replaceWith(fn) {</span>
+<span class="cstat-no" title="statement not covered">    return <span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">      fn.apply(logger, arguments);</span>
     };
   }
-<span class="cstat-no" title="statement not covered" >  logger = logger || getLogger("console");</span>
-<span class="cstat-no" title="statement not covered" >  ['log','debug','info','warn','error'].forEach(<span class="fstat-no" title="function not covered" >function (item) {</span></span>
-<span class="cstat-no" title="statement not covered" >    console[item] = replaceWith(item === 'log' ? logger.info : logger[item]);</span>
+<span class="cstat-no" title="statement not covered">  logger = logger || getLogger("console");</span>
+<span class="cstat-no" title="statement not covered">  ['log','debug','info','warn','error'].forEach(<span class="fstat-no" title="function not covered">function (item) {</span></span>
+<span class="cstat-no" title="statement not covered">    console[item] = replaceWith(item === 'log' ? logger.info : logger[item]);</span>
   });
 }
 &nbsp;
@@ -1662,7 +1660,7 @@ function requireAppender(appender) {
   try {
     appenderModule = require('./appenders/' + appender);
   } catch (e) {
-<span class="cstat-no" title="statement not covered" >    appenderModule = require(appender);</span>
+<span class="cstat-no" title="statement not covered">    appenderModule = require(appender);</span>
   }
   return appenderModule;
 }
@@ -1680,13 +1678,13 @@ function requireAppender(appender) {
 function loadAppender(appender, appenderModule) {
   appenderModule = appenderModule || requireAppender(appender);
 &nbsp;
-  <span class="missing-if-branch" title="if path not taken" >I</span>if (!appenderModule) {
-<span class="cstat-no" title="statement not covered" >    throw new Error("Invalid log4js appender: " + util.inspect(appender));</span>
+  <span class="missing-if-branch" title="if path not taken">I</span>if (!appenderModule) {
+<span class="cstat-no" title="statement not covered">    throw new Error("Invalid log4js appender: " + util.inspect(appender));</span>
   }
 &nbsp;
   module.exports.appenders[appender] = appenderModule.appender.bind(appenderModule);
-  <span class="missing-if-branch" title="if path not taken" >I</span>if (appenderModule.shutdown) {
-<span class="cstat-no" title="statement not covered" >    appenderShutdowns[appender] = appenderModule.shutdown.bind(appenderModule);</span>
+  <span class="missing-if-branch" title="if path not taken">I</span>if (appenderModule.shutdown) {
+<span class="cstat-no" title="statement not covered">    appenderShutdowns[appender] = appenderModule.shutdown.bind(appenderModule);</span>
   }
   appenderMakers[appender] = appenderModule.configure.bind(appenderModule);
 }
@@ -1700,36 +1698,36 @@ function loadAppender(appender, appenderModule) {
  *  as the first argument.
  * @returns {void}
  */
-<span class="fstat-no" title="function not covered" >function shutdown(cb) {</span>
+<span class="fstat-no" title="function not covered">function shutdown(cb) {</span>
   // First, disable all writing to appenders. This prevents appenders from
   // not being able to be drained because of run-away log writes.
-<span class="cstat-no" title="statement not covered" >  loggerModule.disableAllLogWrites();</span>
+<span class="cstat-no" title="statement not covered">  loggerModule.disableAllLogWrites();</span>
 &nbsp;
   //turn off config reloading
-<span class="cstat-no" title="statement not covered" >  if (configState.timerId) {</span>
-<span class="cstat-no" title="statement not covered" >    clearInterval(configState.timerId);</span>
+<span class="cstat-no" title="statement not covered">  if (configState.timerId) {</span>
+<span class="cstat-no" title="statement not covered">    clearInterval(configState.timerId);</span>
   }
 &nbsp;
   // Call each of the shutdown functions in parallel
-<span class="cstat-no" title="statement not covered" >  var completed = 0;</span>
-<span class="cstat-no" title="statement not covered" >  var error;</span>
-<span class="cstat-no" title="statement not covered" >  var shutdownFcts = [];</span>
-<span class="cstat-no" title="statement not covered" >  var complete = <span class="fstat-no" title="function not covered" >function(err) {</span></span>
-<span class="cstat-no" title="statement not covered" >    error = error || err;</span>
-<span class="cstat-no" title="statement not covered" >    completed++;</span>
-<span class="cstat-no" title="statement not covered" >    if (completed &gt;= shutdownFcts.length) {</span>
-<span class="cstat-no" title="statement not covered" >      cb(error);</span>
+<span class="cstat-no" title="statement not covered">  var completed = 0;</span>
+<span class="cstat-no" title="statement not covered">  var error;</span>
+<span class="cstat-no" title="statement not covered">  var shutdownFcts = [];</span>
+<span class="cstat-no" title="statement not covered">  var complete = <span class="fstat-no" title="function not covered">function(err) {</span></span>
+<span class="cstat-no" title="statement not covered">    error = error || err;</span>
+<span class="cstat-no" title="statement not covered">    completed++;</span>
+<span class="cstat-no" title="statement not covered">    if (completed &gt;= shutdownFcts.length) {</span>
+<span class="cstat-no" title="statement not covered">      cb(error);</span>
     }
   };
-<span class="cstat-no" title="statement not covered" >  for (var category in appenderShutdowns) {</span>
-<span class="cstat-no" title="statement not covered" >    if (appenderShutdowns.hasOwnProperty(category)) {</span>
-<span class="cstat-no" title="statement not covered" >      shutdownFcts.push(appenderShutdowns[category]);</span>
+<span class="cstat-no" title="statement not covered">  for (var category in appenderShutdowns) {</span>
+<span class="cstat-no" title="statement not covered">    if (appenderShutdowns.hasOwnProperty(category)) {</span>
+<span class="cstat-no" title="statement not covered">      shutdownFcts.push(appenderShutdowns[category]);</span>
     }
   }
-<span class="cstat-no" title="statement not covered" >  if (!shutdownFcts.length) {</span>
-<span class="cstat-no" title="statement not covered" >    return cb();</span>
+<span class="cstat-no" title="statement not covered">  if (!shutdownFcts.length) {</span>
+<span class="cstat-no" title="statement not covered">    return cb();</span>
   }
-<span class="cstat-no" title="statement not covered" >  shutdownFcts.forEach(<span class="fstat-no" title="function not covered" >function(shutdownFct) {</span> <span class="cstat-no" title="statement not covered" >shutdownFct(complete); </span>});</span>
+<span class="cstat-no" title="statement not covered">  shutdownFcts.forEach(<span class="fstat-no" title="function not covered">function(shutdownFct) {</span> <span class="cstat-no" title="statement not covered">shutdownFct(complete); </span>});</span>
 }
 &nbsp;
 module.exports = {
@@ -1760,10 +1758,11 @@ module.exports = {
 configure();
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 07:04:02 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sun Apr 16 2017 09:27:28 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
