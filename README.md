@@ -1,4 +1,7 @@
-# test coverage for  [log4js (v1.1.1)](https://github.com/nomiddlename/log4js-node#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-log4js.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-log4js) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-log4js.svg)](https://travis-ci.org/npmtest/node-npmtest-log4js)
+# npmtest-log4js
+
+#### basic test coverage for  [log4js (v1.1.1)](https://github.com/nomiddlename/log4js-node#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-log4js.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-log4js) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-log4js.svg)](https://travis-ci.org/npmtest/node-npmtest-log4js)
+
 #### Port of Log4js to work with node.
 
 [![NPM](https://nodei.co/npm/log4js.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/log4js)
@@ -9,9 +12,15 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-log4js/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-log4js/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-log4js/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-log4js/tree/gh-pages/build)|
 
+- [https://npmtest.github.io/node-npmtest-log4js/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-log4js/build/coverage.html/index.html)
+
 [![istanbul-coverage](https://npmtest.github.io/node-npmtest-log4js/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-log4js/build/coverage.html/index.html)
 
+- [https://npmtest.github.io/node-npmtest-log4js/build/test-report.html](https://npmtest.github.io/node-npmtest-log4js/build/test-report.html)
+
 [![test-report](https://npmtest.github.io/node-npmtest-log4js/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-log4js/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-log4js/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-log4js/build/apidoc.html)
 
 [![apidoc](https://npmdoc.github.io/node-npmdoc-log4js/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-log4js/build/apidoc.html)
 
@@ -83,7 +92,8 @@
         "pretest": "jshint lib/ test/",
         "test": "tape 'test/tape/**/*.js' && vows test/vows/*.js"
     },
-    "version": "1.1.1"
+    "version": "1.1.1",
+    "bin": {}
 }
 ```
 
